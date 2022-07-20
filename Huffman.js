@@ -123,7 +123,7 @@ function main(caminho) {
     return arvore;
 }
 
-var arvore = main("./teste.pdf")
+var arvore = main("./teste.txt")
 
 // Comandos:
 // codificar
