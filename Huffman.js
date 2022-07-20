@@ -20,8 +20,7 @@ class huffmanTree{
   
         this.huffmanTree = this.getHuffmanTree();  
   
-        this.map = this.getHuffmanCode(this.huffmanTree);  
-        console.log(this.map);  
+        this.map = this.getHuffmanCode(this.huffmanTree);    
         
         this.binaryStr = this.getBinaryStr(this.map, str);  
     }  
@@ -104,6 +103,10 @@ class huffmanTree{
         }
         return decode;
     }
+
+    getTableSimbols () {
+        return this.map
+    }
 }
 
 function main(caminho) {
@@ -123,7 +126,11 @@ function main(caminho) {
     return arvore;
 }
 
+// gerar a arvore com um arquivo
 var arvore = main("./teste.txt")
+
+// mostrar os códigos para cada letra
+console.log(arvore.getTableSimbols())
 
 // Comandos:
 // codificar
@@ -131,5 +138,5 @@ var codificar = arvore.getBinaryStr(arvore.map, "teste")
 console.log(codificar)
 
 // decodificar:
-var decodificar = arvore.getWord("1010 000 0110 1010 000")
+var decodificar = arvore.getWord("11111 10000 11110 11111 10000")
 console.log(decodificar)
