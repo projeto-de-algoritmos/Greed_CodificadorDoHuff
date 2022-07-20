@@ -35,6 +35,7 @@ class PriorityQueue {
     constructor() {
         this.items = [];
         this.qtd = 0;
+        this.tree = null
     }
 
     enqueue(element, priority) {
