@@ -1,4 +1,5 @@
 const fs = require("fs");
+var pdfUtil = require('pdf-to-text');
 
 class Node {  
     constructor(value, char, left, right) {  
@@ -20,7 +21,7 @@ class huffmanTree{
         this.huffmanTree = this.getHuffmanTree();  
   
         this.map = this.getHuffmanCode(this.huffmanTree);  
-        //console.log(this.map);  
+        console.log(this.map);  
         
         this.binaryStr = this.getBinaryStr(this.map, str);  
     }  
@@ -105,11 +106,30 @@ class huffmanTree{
     }
 }
 
-var arvore  = new huffmanTree(fs.readFileSync("./teste.txt", "utf8"));
+function main(caminho) {
+    var arvore
+    if(caminho[caminho.length-1] === 'f') {
+        pdfUtil.pdfToText(caminho, function(err, data) {
+            if (err) throw(err);
+            fs.writeFile('arquivo.txt', data, (err) => {
+                if (err) throw err;
+            });
+        });
+        arvore = new huffmanTree(fs.readFileSync("./arquivo.txt", "utf8"));
+    }
+    else {
+        arvore = new huffmanTree(fs.readFileSync(caminho, "utf8"));
+    }
+    return arvore;
+}
+
+var arvore = main("./teste.pdf")
 
 // Comandos:
 // codificar
-console.log(arvore.getBinaryStr(arvore.map, "teste"))
+var codificar = arvore.getBinaryStr(arvore.map, "teste")
+console.log(codificar)
 
 // decodificar:
-console.log(arvore.getWord("0000 10010 11111 0000 10010"))
+var decodificar = arvore.getWord("1010 000 0110 1010 000")
+console.log(decodificar)

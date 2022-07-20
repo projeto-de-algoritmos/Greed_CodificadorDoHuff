@@ -13,7 +13,7 @@ Temas:
  
  (Apague essa seção)
 -->
-# NomedoProjeto
+# HuffCode/Encode
 
 **Número da Lista**: 19<br>
 **Conteúdo da Disciplina**: Algoritmos Ambiciosos<br>
@@ -25,13 +25,13 @@ Temas:
 | 18/0130722  |  Samuel Nogueira Bacelar |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+O projeto se baseia no código de Huffman, usamos ele para gerar a árvore usando as letras e palavras do arquivo (.txt) que o usuário fizer upload. E após ter a árvore gerada o usuário pode escrever um texto para codificá-lo ou escrever um código para decoficá-lo. 
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
+**Linguagem**: JavaScript<br>
 **Framework**: (caso exista)<br>
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
