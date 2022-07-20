@@ -112,5 +112,4 @@ var arvore  = new huffmanTree(fs.readFileSync("./teste.txt", "utf8"));
 console.log(arvore.getBinaryStr(arvore.map, "teste"))
 
 // decodificar:
-var vet = "0000 10010 11111 0000 10010"
-console.log(arvore.getWord(vet))
+console.log(arvore.getWord("0000 10010 11111 0000 10010"))
