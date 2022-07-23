@@ -36,7 +36,7 @@ const Home: NextPage = () => {
   }, [search, arvore])
 
   return (
-    <>
+    <div className={styles.container}>
       <Head>
         <title>Codificador do Huff</title>
         <meta name="description" content="codificador do huff" />
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
         </Container>
         
       </main>
-    </>
+    </div>
   )
 }
 
