@@ -6,7 +6,6 @@ import EncodedText from '../components/EncodedText'
 import EncodedLetter from '../components/EncodedWord'
 import HashTable from '../components/HashTable'
 import { HuffmanTree, main } from '../Huffman'
-import styles from '../styles/Home.module.css'
 const Home: NextPage = () => {
   const [arvore, setArvore] = useState<HuffmanTree>()
   const [fileContent, setFileContent] = useState<any>()
@@ -37,7 +36,7 @@ const Home: NextPage = () => {
   }, [search, arvore])
 
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Codificador do Huff</title>
         <meta name="description" content="codificador do huff" />
@@ -105,7 +104,7 @@ const Home: NextPage = () => {
         </Container>
         
       </main>
-    </div>
+    </>
   )
 }
 
