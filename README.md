@@ -19,12 +19,11 @@ O projeto se baseia no código de Huffman, usamos ele para gerar a árvore de s�
 
 
 ## Instalação 
-**Linguagem**: JavaScript<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: JavaScript/Typescript<br>
+**Framework**: Next.js<br>
+
+Necessário ter Yarn e node.js instalados
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+Ao rodar pela primeira vez, execute `yarn install` na raiz do projeto
+Após isso rodar `yarn dev`
